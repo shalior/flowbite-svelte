@@ -17,6 +17,7 @@
   export let loop: boolean = false;
   export let duration: number = 2000;
   export let thumbClass: string = 'opacity-40';
+  export let id: string = 'default-carousel';
 
   // Carousel
   export let divClass: string = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
@@ -73,7 +74,7 @@
   }
 </script>
 
-<div id="default-carousel" class="relative">
+<div {id} class="relative">
   <div class={divCls}>
     {#each images as { id, imgurl, name, attribution }}
       {#if imageShowingIndex === id}
